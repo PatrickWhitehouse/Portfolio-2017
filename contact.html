@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Patrick Whitehouse's Blog Posts">
+  <meta name="keywords" content="Patrick, Whitehouse, Portfolio, MMU, Personal, Web, Development, Contact, Information">
+  <meta name="author" content="Patrick Whitehouse">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Contact me &ndash; Patrick Whitehouse</title>
+</head>
+<body>
+
+<header>
+  <div class="trigger trigger--sub">
+    <button class="hamburger hamburger--spring" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </div>
+
+  <nav class="nav--sub">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <use xlink:href="img/logo.svg#Logo" />
+    </svg>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <section>
+      <div class="wrapper">
+        <h1>Contact Me</h1>
+        <p>A huge thank-you for taking the time to browse through my portfolio. If you like what I do or just fancy a chat, use the contact form or another method listed below. </p>
+      </div>
+    </section>
+
+
+  <section>
+      <div class="wrapper">
+        <div class="contact">
+          <form action="#" class="contact__form">
+            <label for="name">Your name:</label>
+            <input name="name" type="text" placeholder="My name is..." required autofocus>
+            <label for="email">Your email:</label>
+            <input name="email" type="email" placeholder="My email is..." required>
+            <label for="message">Your message:</label>
+            <textarea name="message" rows="8" cols="50" placeholder="I would just like to say..."></textarea>
+            <button type="submit" name="submit"  class="contact__button">Submit</button>
+            <button type="reset" name="reset" class="contact__button">Reset</button>
+          </form>
+          <div class="contact__cv">
+            <p>Fancy taking a look at what other skills I can offer?</p>
+            <button class="contact__button" onclick=window.open('img/cv.pdf')>Download my CV</button>
+          </div>
+        </div>
+      </div>
+  </section>
+  </main>
+
+
+  <footer>
+    <div class="footer__social">
+      <ul>
+        <li><a href="http://www.facebook.com/padwhitehouse"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="http://www.instagram.com/p.ad"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="http://www.twitter.com/patrickdoesweb"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="http://www.github.com/patrickwhitehouse"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88172365-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+  $.getScript('js/main.js');
+  });
+  </script>
+</body>
+</html>

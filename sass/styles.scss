@@ -1,0 +1,583 @@
+@import "variables";
+@import "hamburgers/hamburgers";
+
+*{
+  box-sizing: border-box;
+}
+html{
+  margin: 0;
+  padding: 0;
+
+  font-size: 100%;
+}
+
+a{
+  transition: all .2s ease-in-out;
+  text-decoration: none;
+
+  color: $primary;
+}
+
+a:hover{
+  transition: all .2s ease-in-out;
+
+  opacity: .6;
+}
+
+a.active{
+  text-decoration: line-through;
+
+  color: $secondary;
+
+  font-weight: bold;
+}
+
+code{
+  color: $primary;
+}
+
+
+
+/* Body Styling */
+
+body{
+  color: $black;
+
+  font-family: $fonts;
+  font-size: calc(1em + .2vw);
+  line-height: 1.5;
+}
+
+/* Nav Styling */
+
+.trigger{
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+
+  text-align: right;
+}
+
+.trigger--open{
+  position: relative;
+}
+
+nav{
+  display: flex;
+  overflow: hidden;
+
+  width: 100%;
+  height: 0;
+
+  transition: all ease .1s;
+
+  justify-content: center;
+  @media (min-width: $tablet){
+    justify-content: space-between;
+  }
+
+  ul{
+    padding: 0;
+
+    text-align: center;
+
+  }
+
+  li{
+    display: block;
+
+    margin-bottom: 20px;
+  }
+}
+
+nav svg{
+  display: none;
+  @media (min-width: $tablet){
+    display: block;
+
+    max-height: 80px;
+
+    fill: $secondary;
+  }
+}
+
+
+.nav--grow{
+  height: 200px;
+
+  transition: all ease .5s;
+}
+
+.trigger--sub{
+  position: relative;
+}
+
+.nav--sub{
+  border-bottom: 1px solid $secondary;
+  @media (min-width: $tablet){
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.nav--sub ul{
+  width: 100%;
+}
+
+.nav--sub svg{
+  display: none;
+
+  @media (min-width: $tablet){
+    display: block;
+
+    max-height: 80px;
+
+    fill: $primary;
+  }
+}
+
+
+
+
+
+
+/* Hero section on index */
+
+section.hero{
+  display: flex;
+  flex-direction: column;
+
+  height: calc(100vh - 300px);
+  padding: 20px;
+
+  color: $secondary;
+  background: linear-gradient(45deg, rgba($primary, .8), rgba($primary, .6)),url('../img/hero_couple.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Work for homepage */
+
+
+.work{
+  display: flex;
+
+  width: 100%;
+
+  flex-wrap: wrap;
+}
+
+.work__item{
+  position: relative;
+
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  width: 300px;
+  min-height: 200px;
+  margin: 10px;
+
+  text-align: center;
+
+  color: $primary;
+  border: 1px solid rgba($primary, .5);
+
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+
+  &:hover .work__overlay{
+    z-index: 999;
+    bottom: 0;
+
+    cursor: pointer;
+    transition: ease-in .2s all;
+  }
+}
+
+.work__desc{
+  padding: 0 10px;
+}
+
+.work__overlay{
+  position: absolute;
+  bottom: calc(-100%);
+
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  transition: ease-in .2s all;
+
+  background-color: rgba($black, .8);
+
+  justify-content: center;
+  align-items: center;
+}
+
+a.work__visit{
+  display: block;
+
+  min-width: 75%;
+  padding: 20px;
+
+  color: $secondary;
+  border: 2px solid $secondary;
+
+  &:hover{
+    opacity: 1;
+    color: $primary;
+    background-color: $secondary;
+  }
+}
+
+/* Work page */
+
+.filters{
+  display: flex;
+}
+
+.filters button{
+  margin-right: 10px;
+  margin-bottom: 30px;
+  padding: 5px 20px;
+
+  transition: all .3s ease;
+
+  color: $secondary;
+  border: 1px solid $secondary;
+  background-color: transparent;
+
+  &:hover{
+    cursor: pointer;
+    transition: all .3s ease;
+
+    color: $primary;
+    background-color: $secondary;
+  }
+  &:focus{
+    cursor: pointer;
+    transition: all .3s ease;
+
+    color: $primary;
+    background-color: $secondary;
+  }
+}
+
+.projects{
+  display: flex;
+
+  width: 100%;
+
+  flex-wrap: wrap;
+}
+
+.projects__item{
+  width: 100%;
+  min-height: 180px;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  border: 1px solid $secondary;
+
+  flex:1 1 300px;
+
+  @media (min-width: $tablet){
+    width: 48%;
+    margin: 1%;
+  }
+}
+
+.projects__img{
+  width: 100%;
+  height: 100%;
+}
+
+.projects__view{
+  display: block;
+
+  width: 75%;
+  margin: 0 auto;
+  padding: 10px 5px;
+
+  text-align: center;
+
+  color: $primary;
+  border: 1px solid $primary;
+  background:linear-gradient(45deg, rgba($secondary,1), rgba($secondary, .8));
+}
+
+/* Blog styling */
+
+.blogs{
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.blog__post{
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  padding: 10px;
+
+  text-align: center;
+
+  border-bottom: 1px solid $primary;
+  background-color: lighten($black, 75%);
+
+  align-items: center;
+  justify-content: space-between;
+  @media (min-width: $tablet){
+    width: 49%;
+    margin: 2%;
+
+    border: 1px dashed $secondary;
+
+    flex: 1 1 400px;
+  }
+  &:nth-child(even){
+    background-color: lighten($black, 80%);
+  }
+}
+
+.blog__read{
+  display: flex;
+
+  width: 75%;
+  padding: 10px;
+
+  color: $secondary;
+  border: 1px solid $secondary;
+  background: linear-gradient(45deg, rgba($primary,.8), rgba($primary,.4));
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contact page */
+
+
+
+form{
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet){
+    width: 48%;
+  }
+}
+
+form textarea{
+  resize: none;
+}
+
+form label{
+  margin-bottom: 5px;
+
+  color: $primary;
+}
+
+form input, form textarea{
+  margin-bottom: 10px;
+  padding: 5px;
+
+  color: $secondary;
+}
+
+form button{
+  margin-top: 20px ;
+  padding: 10px;
+}
+
+
+.contact{
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet){
+    flex-direction: row;
+
+    justify-content: space-between;
+  }
+}
+
+.contact__cv{
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet){
+    width: 48%;
+  }
+}
+
+  .contact__button{
+    padding: 10px;
+
+    transition: all .3s ease-in-out;
+
+    color: $primary;
+    border: 1px solid $primary;
+    background-color: transparent;
+
+    &:hover{
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+
+      color: $secondary;
+      background-color: $primary;
+    }
+  }
+
+
+
+
+/* Footer */
+
+footer{
+  display: flex;
+
+  width: 100%;
+  height: auto;
+  min-height: 120px;
+  margin-top: 55px;
+  padding: 20px;
+
+  text-align: center;
+
+  background: linear-gradient(90deg,rgba($black,1), rgba($black, .98));
+
+  align-items: center;
+  justify-content: center;
+
+  a{
+    color: $secondary;
+  }
+}
+
+.footer__social{
+  display: flex;
+
+  width: 100%;
+
+  justify-content: center;
+}
+
+footer ul{
+  display: flex;
+
+  width: 70%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  justify-content: space-between;
+}
+
+footer li{
+  display: inline;
+
+  transition: all ease .2s;
+
+
+  &:hover{
+    transition: all ease .2s;
+    transform: scale(1.4);
+  }
+}
+
+
+/* Blog post format */
+
+.screenshot{
+  display:flex;
+  flex-direction: column;
+
+  text-align: center;
+
+  align-items: center;
+  justify-content: center;
+}
+.screenshot__img{
+  width: 100%;
+  height: auto;
+
+  @media (min-width: $tablet){
+    max-width: 70%;
+
+  }
+}
+
+.screenshot__caption{
+  color: $primary;
+
+  font-style: italic;
+}
+
+.btn--back{
+  padding: 10px;
+
+  transition: all .3s ease-in-out;
+
+  color: $primary;
+  border: 1px solid $primary;
+  background-color: transparent;
+
+  &:hover{
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+
+    color: $secondary;
+    background-color: $primary;
+  }
+}
+
+
+/* Responsive Stuff */
+
+@media (min-width: $tablet){
+  .trigger{
+    display: none;
+  }
+
+  nav{
+    position: absolute;
+
+    height: auto;
+    ul{
+      margin-right: 20px;
+    }
+    li{
+      display: inline-block;
+
+      margin: 0 20px;
+      a{
+        color: $secondary;
+        &:hover{
+          text-decoration:line-through;
+        }
+      }
+    }
+  }
+  .nav--sub{
+    position: relative;
+  }
+  .nav--sub ul{
+    width: auto;
+  }
+}

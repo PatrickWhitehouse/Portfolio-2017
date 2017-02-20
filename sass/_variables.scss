@@ -1,0 +1,25 @@
+/* Colour Variables */
+
+$primary: #64048c;
+$secondary: #04eea0;
+$white: #FFF;
+$black: #292929;
+
+
+/* Grid */
+
+.wrapper{
+  max-width: 1220px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* Fonts */
+
+$fonts: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+
+/* Responsive Variables */
+
+$tablet: 768px;
+$mobile: 368px;

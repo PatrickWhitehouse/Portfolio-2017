@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Patrick Whitehouse's Blog Post on his portfolio development">
+    <meta name="keywords" content="Patrick, Whitehouse, Portfolio, MMU, Personal, Blog, Web, Development, Blog Posts, Development">
+    <meta name="author" content="Patrick Whitehouse">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portfolio Development &ndash; Blog Posts &ndash; Patrick Whitehouse</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="trigger trigger--sub">
+            <button class="hamburger hamburger--spring" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+        </div>
+
+        <nav class="nav--sub">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <use xlink:href="../img/logo.svg#Logo" />
+    </svg>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../work.html">Work</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <article>
+                <h1>Portfolio Development</h1>
+                <h2>What is Gulp and why did I choose to include it?</h2>
+                <p>In this blog post, I’ll be explaining the reasoning behind my choices of layout, colours and fonts used within this website. Not only will I be explaining the aesthetics of the website, I’ll also be exploring into the back end of the site and introducing the tools I used along the way which may or may not have helped me speed up the process of achieving my goal of creating a professional portfolio.</p>
+                <h3>Research</h3>
+                  <p>I have never been fond of the research stage, however, I’ve learnt how important it is in order to develop a website! Nonetheless, for the creation of my portfolio it was a vital necessity that I carried out a portion of research in order to help guide myself through the design and build stages. </p>
+                  <p>The first step I had taken to achieve my goal was to look at common features of other portfolios. For this, I used <a href="http://www.awwwards.com" title="External link to awwwards">awwwards</a>. The reason I had chosen <a href="http://www.awwwards.com" title="External link to awwwards">awwwards</a> as my main source of research was because all of the websites listed within the directory have been nominated or have been given a web award of some sort. This gave me the confidence that the authors and creators of the listed websites knew what they were doing in terms of design. From here I took simple notes of layouts, colour schemes and typography which I found attractive.</p>
+                  <figure class="screenshot">
+                    <img src="../img/awwwards.jpg" alt="Awwwards homepage" class="screenshot__img">
+                    <figcaption class="screenshot__caption">Awwwards homepage</figcaption>
+                  </figure>
+                  <h3>Design</h3>
+                  <p>
+                      For the design stage, I used a variety of methods. Firstly, I created sketches with a piece of paper and pencil. The sketching step allowed me to quickly draft ideas regardless of my drawing abilities. I tried to incorporate my layout research into my sketches in order to make it clear to myself what was achievable and realistic.
+                  </p>
+                  <p>
+                      After I had come up with a few simplistic designs on paper, I then moved onto turning them into a bunch of electronic wireframes using <a href="http://www.sketchapp.com" title="View the official Sketch app homepage">Sketch</a>, a design application for Mac. I found <a href="http://www.sketchapp.com" title="View the official Sketch app homepage">Sketch</a> the best option as I could pick from defualt template art boards, which are already built into the application upon installation; to help imitate different screen resolutions and device layouts.
+                  </p>
+                  <p>
+                      Based on my research I was able to implement my colour scheme and typography into the wireframes inside of <a href="http://www.sketchapp.com" title="View the official Sketch app homepage">Sketch</a>. <a href="http://www.sketchapp.com" title="View the official Sketch app homepage">Sketch</a> allows full flexibility of fonts and allowed myself to edit multiple elements of the font face such as the font weight, letter spacing, line height and text decoration.
+                  </p>
+                  <h3>Development</h3>
+                  <p>
+                      I decided to use HTML and CSS to give the website a structure and some styling. I also used a small amount of Javascript to add functionality. Alongside these, I decided to use SASS as a pre-processor for CSS. The reason behind this was that SASS allowed me to create variables and mixins which meant I could reuse a block of code without having to go through the pain of retyping it every time it was needed.</p>
+                      <figure class="screenshot">
+                        <img src="../img/sass_example.jpg" alt="Example of how SASS is used" class="screenshot__img">
+                        <figcaption class="screenshot__caption">Example of how SASS is used</figcaption>
+                      </figure>
+                      <p>
+                          Other than languages, I found <a href="http://gulpjs.com/" title="Official Gulp homepage">Gulp</a> and <a href="https://github.com/" title="GitHub official homepage">GitHub</a> extremely useful whilst I was developing. <a href="https://github.com/" title="GitHub official homepage">Git</a> allowed me to constantly log my changes and revert back to an older version if something went wrong. My main use of <a href="http://gulpjs.com/" title="Official Gulp homepage">Gulp</a> was that it allowed me to automate the conversion of SCSS (SASS) files to CSS.
+                      </p>
+                      <p>
+                          I also used <a href="http://gulpjs.com/" title="Official Gulp homepage">Gulp</a> for other features such as <a href="https://www.browsersync.io/" title="Browsersync homepage">Browsersync</a>. <a href="https://www.browsersync.io/" title="Browsersync homepage">Browsersync</a> allowed me to create a localhost server and enabled me to view my website on different devices simultaneously without having to upload it to a web server every time there was a change. This helped speed up my responsive development immensely as I could edit the webpage and style sheet live thus meaning it would update instantly on the device I was viewing it on. I would recommend <a href="https://www.browsersync.io/" title="Browsersync homepage">Browsersync</a> to every front end developer out there who isn't using it already! You'll see how amazing and practical it is.</p>
+                          <figure class="screenshot">
+                            <img src="../img/gulp_example.jpg" alt="Example of how Gulp is used" class="screenshot__img">
+                            <figcaption class="screenshot__caption">My current Gulp file with Browsersync set up</figcaption>
+                          </figure>
+
+
+                      <p>Take a look at my <a href="http://www.github.com/patrickwhitehouse" title="Patrick's GitHub Profile">GitHub Profile.</a>
+                      </p>
+                      <h3>References</h3>
+                      <p >
+                        Awwwards. (no date) <i>Awwwards - Website Awards - Best Web Design Trends.</i> [Online] [Accessed 10th November 2016] <a href=" http://www.awwwards.com/" title="Awwwards web design trends"> http://www.awwwards.com/</a>
+                      </p>
+                      <p >Sketch. (no date) <i>Sketch - Professional Digital Design for Mac.</i> [Online] [Accessed 10th November 2016] <a href="https://sketchapp.com/" title="Sketch homepage">https://sketchapp.com/</a></p>
+                      <p >
+                        Gulp. (no date) <i>gulp.js - the streaming build system.</i> [Online] [Accessed 10th November 2016] <a href="http://gulpjs.com/" title="To GulpJS homepage">http://gulpjs.com/</a>
+                      </p>
+                      <p >
+                        GitHub. (no date) <i>GitHub.</i> [Online] [Accessed 10th November 2016] <a href="https://github.com/" title="To GitHub homepage">https://github.com/</a>
+                      </p>
+                      <p >
+                        Browsersync. (no date) <i>Browsersync - Time-saving synchronised browser testing.</i> [Online] [Accessed 10th November 2016] <a href="https://www.browsersync.io/" title="Browsersync homepage">https://www.browsersync.io/</a>
+                      </p>
+                      <button onclick="window.history.go(-1)" class="btn--back">Go back</button>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+      <div class="footer__social">
+        <ul>
+          <li><a href="http://www.facebook.com/padwhitehouse"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="http://www.instagram.com/p.ad"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="http://www.twitter.com/patrickdoesweb"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="http://www.github.com/patrickwhitehouse"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88172365-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.getScript('../js/main.js');
+        });
+    </script>
+</body>
+
+</html>
