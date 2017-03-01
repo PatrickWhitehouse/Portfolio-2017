@@ -659,6 +659,9 @@ a.active {
 code {
   color: #64048c; }
 
+pre {
+  white-space: pre-wrap; }
+
 /* Body Styling */
 body {
   color: #292929;

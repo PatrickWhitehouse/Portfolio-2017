@@ -6,6 +6,7 @@ var notify = require("gulp-notify");
 var cleanCSS = require('gulp-clean-css');
 var browserSync = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
+var csscomb = require('gulp-csscomb');
 
 // Default task
 gulp.task('default', ['browser-sync']);
@@ -80,3 +81,11 @@ gulp.task('minify-css', ['del'], function() {
 });
 
 gulp.task('build', ['del-dist','copy', 'del', 'minify-css', 'imagemin']);
+
+// CSS Comb once minified 
+
+gulp.task('comb', function() {
+  return gulp.src('build/css/styles.css')
+    .pipe(csscomb())
+    .pipe(gulp.dest('./build/css'));
+});
