@@ -662,6 +662,9 @@ code {
 pre {
   white-space: pre-wrap; }
 
+h4 {
+  font-style: italic; }
+
 /* Body Styling */
 body {
   color: #292929;

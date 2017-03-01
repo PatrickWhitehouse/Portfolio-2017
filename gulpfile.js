@@ -85,7 +85,7 @@ gulp.task('build', ['del-dist','copy', 'del', 'minify-css', 'imagemin']);
 // CSS Comb once minified 
 
 gulp.task('combcss', function() {
-  return gulp.src('build/css/styles.css')
+  return gulp.src('./dist/css/styles.css')
     .pipe(csscomb())
-    .pipe(gulp.dest('./build/css'));
+    .pipe(gulp.dest('./dist/css'));
 });
