@@ -53,7 +53,7 @@ gulp.task('imagemin',['minify-css'], function(){
 // Build Task
 
 gulp.task('copy',['del-dist'], function(){
-  return gulp.src('./**')
+  return gulp.src(['./**', '!./{node_modules,node_modules/**}'])
   .pipe(gulp.dest('./dist/'))
 });
 
@@ -62,7 +62,8 @@ gulp.task('del',['copy'], function(){
   del.sync([
     './dist/node_modules',
     './dist/sass',
-    './dist/gulpfile.js'
+    './dist/gulpfile.js',
+    './dist/package.json'
   ])
 });
 
