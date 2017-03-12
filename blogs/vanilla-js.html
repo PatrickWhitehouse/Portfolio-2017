@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Patrick Whitehouse's Blog Post on Vanilla JavsScript animation">
+    <meta name="keywords" content="Patrick, Whitehouse, Portfolio, MMU, Personal, Blog, Web, Development, Blog Posts, Vanilla, JavaScript, JS">
+    <meta name="author" content="Patrick Whitehouse">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Vanilla JavaScript &ndash; Blog Posts &ndash; Patrick Whitehouse</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="trigger trigger--sub">
+            <button class="hamburger hamburger--spring" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+        </div>
+
+        <nav class="nav--sub">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <use xlink:href="../img/logo.svg#Logo" />
+    </svg>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../work.html">Work</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <article>
+                <h1>Vanilla JavaScript</h1>
+                <h2>Self initiated project</h2>
+                <h3>Aims and Objectives</h3>
+                <p>The aim of this self-initiated project was to reproduce my current portfolio homepage by using CSS grids, an upcoming CSS property.</p>
+                <p>To achieve the aim, it was important that a good resource was found to learn CSS Grid, and also a suitable platform to test my code.</p>
+
+                <h3>Definition</h3>
+                <p>At the start of this project, I had no understanding of CSS Grids, however I had a good understanding of Flexbox and also had used frameworks such as Bootstrap in previous projects. Due to this, I decided it would be best to start from scratch and to learn the basics whilst documenting them.</p>
+                <p>As quite a lot, if not the majority of web traffic is from handheld devices, such as mobile phones and tablets, the web has had to adapt to suit these devices and fulfil their user’s needs. To help reduce development time and to speed up rapid prototyping, frameworks were created so that developers could create responsive, accessible and functional web applications with speed. Some examples of well-known frameworks are <a href="http://getbootstrap.com">Bootstrap</a> and <a href="http://foundation.zurb.com">Foundation by Zurb</a>. Frameworks can be downloaded and included through a stylesheet or through a CDN (content delivery network). As frameworks tend to include quite a lot of default styles, these cause the stylesheets to be relatively large and could increase load times which will cause some developers to steer away from them. An alternative to frameworks is <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox</a>. Flexbox was introduced in 2014 and is supported by most browsers. Flexbox gives developers and designers full control over their designs and most importantly, very little code is needed to create a complex layout. A relatively new CSS layout property is CSS Grids. Currently it is not supported by all browsers and must be enabled using flags in Chrome. </p>
+                <p> &rdquo;Flexbox is essentially for laying out items in a single dimension – in a row OR a column. Grid is for layout of items in two dimensions – rows AND columns. &ldquo; (Andrew, 2016:online)</p>
+                
+
+                <h3>Setup</h3>
+                <p>For this project, only a small selection of tools were used. These were:</p>
+                <p>
+                  <ol>
+                    <li>Sublime text – My choice of text editor. Within Sublime, I also used plugins to help speed up my workflow.</li>
+                    <li>CodePen was used during the beginning of the project. </li>
+                    <li>Gulp was used for one feature only, BrowserSync.</li>
+                    <li>HTML &amp; CSS – The languages used to make this project possible.</li>
+                  </ol>
+                </p>
+
+                <h3>Location</h3>
+                <p>The documentation of my learning was placed on <a href="http://codepen.io/patrickwhitehouse/">CodePen</a>.
+                <br>
+                The final <a href="http://www.patrickwhitehouse.pw/css-grid">CSS Grid demonstrator.</a>
+                </p>
+
+                <h3>How</h3>
+                <p>As CSS Grids is only just emerging in modern web browsers, it was relatively hard to find tutorials and resources to learn about how it works. Luckily, I follow a well know key figure in the industry on Twitter, <a href="https://twitter.com/rachelandrew">Rachel Andrew</a>. Rachel had posted a link to a useful website which she had created, dedicated for beginners interested in learning CSS Grids and the syntax. I decided to document my learning on CodePen as it was easy to create an initial pen and to make various iterations of that pen as my learning developed.</p>
+
+                <h4>First Iteration</h4>
+                <p>For the first pen, a simple grid was created using six div elements within a wrapper which had the display:grid; property added to it. Within the wrapper, three columns and rows had been created. The code for the columns and rows were: 100px 100px 100px. This means that rows have a height of 100px and the columns have a width of 100px, which is repeated three times.  As this grid uses a defined set width of the columns, this makes it unresponsive.</p>
+                <p data-height="400" data-theme-id="dark" data-slug-hash="apyjoK" data-default-tab="html,result" data-user="patrickwhitehouse" data-embed-version="2" data-pen-title="Self initiated project - CSS Grids - 1" class="codepen">See the Pen <a href="http://codepen.io/patrickwhitehouse/pen/apyjoK/">Self initiated project - CSS Grids - 1</a> by Patrick Whitehouse (<a href="http://codepen.io/patrickwhitehouse">@patrickwhitehouse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+                <h4>Second Iteraiton</h4>
+                <p>As previously mentioned, using a defined width causes the grid to be unresponsive. A way around this is by using a new property called fraction units, written as ‘fr’ in grids. In this pen, the columns have been set to 1fr which means each column takes up one fraction unit of the available space, which is shared across three columns. If the first column was changed to ‘2fr’ this means it would take up two times as much space as the other two columns. </p>
+                <p data-height="400" data-theme-id="dark" data-slug-hash="LxjBNq" data-default-tab="html,result" data-user="patrickwhitehouse" data-embed-version="2" data-pen-title="Self initiated project - CSS Grids - 2" class="codepen">See the Pen <a href="http://codepen.io/patrickwhitehouse/pen/LxjBNq/">Self initiated project - CSS Grids - 2</a> by Patrick Whitehouse (<a href="http://codepen.io/patrickwhitehouse">@patrickwhitehouse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+                <h4>Third Iteration</h4>
+                <p>What happens if you want the first column to get no bigger than 80px and no smaller than 50px? Simple. Add the ‘minmax’ property to the first column. The minmax property is self-explanatory. The first value you pass is the minimum width that column will resize to, the second property is the maximum width it’ll expand to.</p>
+                <p data-height="400" data-theme-id="dark" data-slug-hash="EZvpNe" data-default-tab="html,result" data-user="patrickwhitehouse" data-embed-version="2" data-pen-title="Self initiated project - CSS Grids - 3" class="codepen">See the Pen <a href="http://codepen.io/patrickwhitehouse/pen/EZvpNe/">Self initiated project - CSS Grids - 3</a> by Patrick Whitehouse (<a href="http://codepen.io/patrickwhitehouse">@patrickwhitehouse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+                <h4>Fourth Iteration</h4>
+                <p>After the third iteration, I attempted to recreate the layout of my portfolios homepage. As my portfolio only uses a single column layout, it was relatively easy to achieve this in CSS grids.</p>
+                <p data-height="400" data-theme-id="dark" data-slug-hash="MJvzOQ" data-default-tab="html,result" data-user="patrickwhitehouse" data-embed-version="2" data-pen-title="Self initiated project - CSS Grids - 4" class="codepen">See the Pen <a href="http://codepen.io/patrickwhitehouse/pen/MJvzOQ/">Self initiated project - CSS Grids - 4</a> by Patrick Whitehouse (<a href="http://codepen.io/patrickwhitehouse">@patrickwhitehouse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+                <h4>Final Iteration</h4>
+                <p>Once I understood CSS grids and how the children behaved inside of the grid container, I decided to recreate Manchester Metropolitan University’s homepage, using their images and colours. An issue I ran into during this iteration was remembering to group elements within divs for them to display in the same cell. CSS Grid tries to place each child into its own cell within the grid meaning, for example, if you had a H1 and P tag and wanted them in the same cell, you would have to group them in a div. 
+                <br><br>
+                The final <a href="http://www.patrickwhitehouse.pw/css-grid">CSS Grid demonstrator.</a>
+
+                <h3>Evaluation</h3>
+                <p>It was relatively easy to recreate the homepage using CSS grids. This was down to grids allowing me to add other properties such as grid gap which meant usual CSS properties such as margin didn’t need to be added to space grid rows or columns. I believe CSS grids has an exciting future once all modern browsers decide to implement it. Sophisticated layouts can be created rather easily and elements can be moved around and positioned however the developer needs them with ease.</p>
+
+                <h3>References</h3>
+                <p>Andrew, R., 2016. <i>Should I use Grid or Flexbox?.</i> [Online] 
+                    Available at: https://rachelandrew.co.uk/archives/2016/03/30/should-i-use-grid-or-flexbox/
+                    [Accessed 27 February 2017].
+
+                </p>
+
+                <button onclick="window.history.go(-1)" class="btn--back">Go back</button>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+      <div class="footer__social">
+        <ul>
+          <li><a href="http://www.facebook.com/padwhitehouse"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="http://www.instagram.com/p.ad"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="http://www.twitter.com/patrickdoesweb"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="http://www.github.com/patrickwhitehouse"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-88172365-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.getScript('../js/main.js');
+        });
+    </script>
+</body>
+
+</html>

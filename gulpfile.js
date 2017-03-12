@@ -30,7 +30,7 @@ gulp.task('sass', function () {
   return gulp.src('./sass/styles.scss')
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(gulp.dest('./css/'))
-    .pipe(notify("OOOOO Killum!"));
+    .pipe(notify("Complied!"));
 });
 
 
