@@ -45,13 +45,11 @@
                 <h1>Vanilla JavaScript</h1>
                 <h2>Self initiated project</h2>
                 <h3>Aims and Objectives</h3>
-                <p>The aim of this self-initiated project was to reproduce my current portfolio homepage by using CSS grids, an upcoming CSS property.</p>
-                <p>To achieve the aim, it was important that a good resource was found to learn CSS Grid, and also a suitable platform to test my code.</p>
+                <p>The aim of this project was to understand how difficult it would be to create animations using pure Vanilla JavaScript rather than depending on JavaScript libraries such as <a href="https://jquery.com">jQuery</a>.</p>
 
                 <h3>Definition</h3>
-                <p>At the start of this project, I had no understanding of CSS Grids, however I had a good understanding of Flexbox and also had used frameworks such as Bootstrap in previous projects. Due to this, I decided it would be best to start from scratch and to learn the basics whilst documenting them.</p>
-                <p>As quite a lot, if not the majority of web traffic is from handheld devices, such as mobile phones and tablets, the web has had to adapt to suit these devices and fulfil their user’s needs. To help reduce development time and to speed up rapid prototyping, frameworks were created so that developers could create responsive, accessible and functional web applications with speed. Some examples of well-known frameworks are <a href="http://getbootstrap.com">Bootstrap</a> and <a href="http://foundation.zurb.com">Foundation by Zurb</a>. Frameworks can be downloaded and included through a stylesheet or through a CDN (content delivery network). As frameworks tend to include quite a lot of default styles, these cause the stylesheets to be relatively large and could increase load times which will cause some developers to steer away from them. An alternative to frameworks is <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox</a>. Flexbox was introduced in 2014 and is supported by most browsers. Flexbox gives developers and designers full control over their designs and most importantly, very little code is needed to create a complex layout. A relatively new CSS layout property is CSS Grids. Currently it is not supported by all browsers and must be enabled using flags in Chrome. </p>
-                <p> &rdquo;Flexbox is essentially for laying out items in a single dimension – in a row OR a column. Grid is for layout of items in two dimensions – rows AND columns. &ldquo; (Andrew, 2016:online)</p>
+                <p>Almost all browsers come with JavaScript enabled in them which means all the browser must do is load and run the JavaScript file that the user creates. Libraries such as jQuery must be linked either by downloading the jQuery file and including that in a folder within the directory, or through using a CDN (content delivery network). Although the syntax for jQuery is shorter and tends to be easier to understand than Vanilla JavaScript, having to depend on external files could decrease site performance speeds. Is there any need in requiring the user to download the whole jQuery library just to create a fade in animation which can be done just as easily in Vanilla JavaScript? With recent features, such as CSS animations, simple effects can be achieved without the need of any JavaScript. 
+</p>
                 
 
                 <h3>Setup</h3>
@@ -60,54 +58,50 @@
                   <ol>
                     <li>Sublime text – My choice of text editor. Within Sublime, I also used plugins to help speed up my workflow.</li>
                     <li>CodePen was used during the beginning of the project. </li>
-                    <li>Gulp was used for one feature only, BrowserSync.</li>
-                    <li>HTML &amp; CSS – The languages used to make this project possible.</li>
+                    <li>HTML & CSS & JS – The languages used to make this project possible. </li>
                   </ol>
                 </p>
 
                 <h3>Location</h3>
                 <p>The documentation of my learning was placed on <a href="http://codepen.io/patrickwhitehouse/">CodePen</a>.
-                <br>
-                The final <a href="http://www.patrickwhitehouse.pw/css-grid">CSS Grid demonstrator.</a>
                 </p>
 
                 <h3>How</h3>
-                <p>As CSS Grids is only just emerging in modern web browsers, it was relatively hard to find tutorials and resources to learn about how it works. Luckily, I follow a well know key figure in the industry on Twitter, <a href="https://twitter.com/rachelandrew">Rachel Andrew</a>. Rachel had posted a link to a useful website which she had created, dedicated for beginners interested in learning CSS Grids and the syntax. I decided to document my learning on CodePen as it was easy to create an initial pen and to make various iterations of that pen as my learning developed.</p>
+                <p>JavaScript is used on most of the websites serving on the web. JavaScript helps improve user experience by providing features such as animations. Recent trends such as responsive hamburger menus usually rely heavily on JavaScript. Quite a lot of developers chose to use jQuery rather than Vanilla JavaScript as the code is easier to understand and effects can be achieved with little code in comparison to Vanilla JavaScript.  However, as previously mentioned, it’s a waste of time and bandwidth making the user download the full jQuery library just for them to see a simple fade in animation which can be achieved in both CSS and Vanilla JavsScript.</p>
 
                 <h4>First Iteration</h4>
-                <p>For the first pen, a simple grid was created using six div elements within a wrapper which had the display:grid; property added to it. Within the wrapper, three columns and rows had been created. The code for the columns and rows were: 100px 100px 100px. This means that rows have a height of 100px and the columns have a width of 100px, which is repeated three times.  As this grid uses a defined set width of the columns, this makes it unresponsive.</p>
-                <p data-height="400" data-theme-id="dark" data-slug-hash="apyjoK" data-default-tab="html,result" data-user="patrickwhitehouse" data-embed-version="2" data-pen-title="Self initiated project - CSS Grids - 1" class="codepen">See the Pen <a href="http://codepen.io/patrickwhitehouse/pen/apyjoK/">Self initiated project - CSS Grids - 1</a> by Patrick Whitehouse (<a href="http://codepen.io/patrickwhitehouse">@patrickwhitehouse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                <p>The first iteration was to see how easy it was to change a div colour using Vanilla JavaScript. Straight away, I noticed a weakness to Vanilla JavaScript compared to jQuery. In Vanilla JavaScript, you need to store the div in a variable in order to prevent continuously using the lengthy selector:<pre><code>(document.getElementById(‘id’))</code></pre> In jQuery, you can simply grab the ID or class by using: <pre><code>$(‘#div’).</code></pre></p>
+                <p data-height="400" data-theme-id="dark" data-slug-hash="oZLJjY" data-default-tab="html,result" data-user="patrickwhitehouse" data-embed-version="2" data-pen-title="Javascript project - 1" class="codepen">See the Pen <a href="http://codepen.io/patrickwhitehouse/pen/oZLJjY/">Javascript project - 1</a> by Patrick Whitehouse (<a href="http://codepen.io/patrickwhitehouse">@patrickwhitehouse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
                 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
                 <h4>Second Iteraiton</h4>
-                <p>As previously mentioned, using a defined width causes the grid to be unresponsive. A way around this is by using a new property called fraction units, written as ‘fr’ in grids. In this pen, the columns have been set to 1fr which means each column takes up one fraction unit of the available space, which is shared across three columns. If the first column was changed to ‘2fr’ this means it would take up two times as much space as the other two columns. </p>
-                <p data-height="400" data-theme-id="dark" data-slug-hash="LxjBNq" data-default-tab="html,result" data-user="patrickwhitehouse" data-embed-version="2" data-pen-title="Self initiated project - CSS Grids - 2" class="codepen">See the Pen <a href="http://codepen.io/patrickwhitehouse/pen/LxjBNq/">Self initiated project - CSS Grids - 2</a> by Patrick Whitehouse (<a href="http://codepen.io/patrickwhitehouse">@patrickwhitehouse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                <p>The second iteration was to demonstrate how to toggle classes on elements. jQuery is often used for this feature when creating responsive navigations for when a hamburger menu needs to appear. I still had to include a ID for the div even though I was toggling classes as I was using: <pre><code>(document.getElementById(‘id’)).</code></pre></p>
+                <p data-height="400" data-theme-id="dark" data-slug-hash="OpWVVE" data-default-tab="result" data-user="patrickwhitehouse" data-embed-version="2" data-pen-title="Javascript project - 2" class="codepen">See the Pen <a href="http://codepen.io/patrickwhitehouse/pen/OpWVVE/">Javascript project - 2</a> by Patrick Whitehouse (<a href="http://codepen.io/patrickwhitehouse">@patrickwhitehouse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
                 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
                 <h4>Third Iteration</h4>
-                <p>What happens if you want the first column to get no bigger than 80px and no smaller than 50px? Simple. Add the ‘minmax’ property to the first column. The minmax property is self-explanatory. The first value you pass is the minimum width that column will resize to, the second property is the maximum width it’ll expand to.</p>
-                <p data-height="400" data-theme-id="dark" data-slug-hash="EZvpNe" data-default-tab="html,result" data-user="patrickwhitehouse" data-embed-version="2" data-pen-title="Self initiated project - CSS Grids - 3" class="codepen">See the Pen <a href="http://codepen.io/patrickwhitehouse/pen/EZvpNe/">Self initiated project - CSS Grids - 3</a> by Patrick Whitehouse (<a href="http://codepen.io/patrickwhitehouse">@patrickwhitehouse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                <p>Once I had figured out how to append classes, I decided to challenge myself. A set myself a task to animate elements once they were visible in the viewport (window). After using <a href="http://stackoverflow.com">Stack Overflow</a> for some troubleshooting, I discovered I was able to use document.getElementsByClassName('box'); to retrieve all the items with the class name ‘box’. Unlike the getElementById, it returned the classes in an array format which meant a loop had to be used to apply classes to each box, otherwise, only the first box would have been affected and had the class applied to it. This is where I struggled most. Making an element fade in when it is visible in the viewport is easier said than done in Vanilla JavaScript. For this iteration, I simply made the elements fade in when the final paragraph was scrolled past. 
+</p>
+                <p data-height="400" data-theme-id="dark" data-slug-hash="KWWwGB" data-default-tab="result" data-user="patrickwhitehouse" data-embed-version="2" data-pen-title="JavaScript animation" class="codepen">See the Pen <a href="http://codepen.io/patrickwhitehouse/pen/KWWwGB/">JavaScript animation</a> by Patrick Whitehouse (<a href="http://codepen.io/patrickwhitehouse">@patrickwhitehouse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
                 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
                 <h4>Fourth Iteration</h4>
-                <p>After the third iteration, I attempted to recreate the layout of my portfolios homepage. As my portfolio only uses a single column layout, it was relatively easy to achieve this in CSS grids.</p>
-                <p data-height="400" data-theme-id="dark" data-slug-hash="MJvzOQ" data-default-tab="html,result" data-user="patrickwhitehouse" data-embed-version="2" data-pen-title="Self initiated project - CSS Grids - 4" class="codepen">See the Pen <a href="http://codepen.io/patrickwhitehouse/pen/MJvzOQ/">Self initiated project - CSS Grids - 4</a> by Patrick Whitehouse (<a href="http://codepen.io/patrickwhitehouse">@patrickwhitehouse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                <p>One of the most common trends on websites is a navigation that becomes fixed once the user has scrolled past it. This was easy to recreate using Vanilla JavaScript. All that was needed was the windows height, the nav and the class I was adding and removing. </p>
+                <p data-height="400" data-theme-id="dark" data-slug-hash="zZNvop" data-default-tab="result" data-user="patrickwhitehouse" data-embed-version="2" data-pen-title="Javascript project - 3 - Sticky nav" class="codepen">See the Pen <a href="http://codepen.io/patrickwhitehouse/pen/zZNvop/">Javascript project - 3 - Sticky nav</a> by Patrick Whitehouse (<a href="http://codepen.io/patrickwhitehouse">@patrickwhitehouse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
                 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
                 <h4>Final Iteration</h4>
-                <p>Once I understood CSS grids and how the children behaved inside of the grid container, I decided to recreate Manchester Metropolitan University’s homepage, using their images and colours. An issue I ran into during this iteration was remembering to group elements within divs for them to display in the same cell. CSS Grid tries to place each child into its own cell within the grid meaning, for example, if you had a H1 and P tag and wanted them in the same cell, you would have to group them in a div. 
-                <br><br>
-                The final <a href="http://www.patrickwhitehouse.pw/css-grid">CSS Grid demonstrator.</a>
+                <p>All the previous examples have used either getElementById or getElementsByClassName to store the element which I wanted to animate using JavaScript. The downside to this is getElementById doesn’t select all the elements with that ID, just one, and getElementsByClassName returns an array of elements with that class, meaning a loop is needed to execute code. A universal selector that can be used for both classes and ID’s is querySelector, for example querySelector(‘.box’). It can also be used to grab any CSS selector such as a paragraph tag which neither getElementById or getElementsByClassName can do. </p>
+                <p data-height="400" data-theme-id="dark" data-slug-hash="LWyxEL" data-default-tab="js,result" data-user="patrickwhitehouse" data-embed-version="2" data-pen-title="Animations with querySelector" class="codepen">See the Pen <a href="http://codepen.io/patrickwhitehouse/pen/LWyxEL/">Animations with querySelector</a> by Patrick Whitehouse (<a href="http://codepen.io/patrickwhitehouse">@patrickwhitehouse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+                <a href="http://www.patrickwhitehouse.pw/vanilla-js">Final Vanilla JavaScript demonstrator</a>
+
+                
 
                 <h3>Evaluation</h3>
-                <p>It was relatively easy to recreate the homepage using CSS grids. This was down to grids allowing me to add other properties such as grid gap which meant usual CSS properties such as margin didn’t need to be added to space grid rows or columns. I believe CSS grids has an exciting future once all modern browsers decide to implement it. Sophisticated layouts can be created rather easily and elements can be moved around and positioned however the developer needs them with ease.</p>
+                <p>It’s clear to see why some developers chose to use jQuery over JavaScript, one of the main reasons being due to its simple syntax and understanding. From now on I will try to use Vanilla JavaScript where possible, as almost anything can be achieved by using it. It’s also vital that accessibility is taken into consideration too and to always consider those with poor internet connection speeds. This is only a small amount of what JavaScript can achieve and with websites becoming more and more advance, JavaScript will always play a huge part in allowing them to function. Not only is JavaScript important for promoting user experience, common front end app frameworks are based from JavaScript, including both <a href="https://facebook.github.io/react/">React.js</a> and <a href="https://angularjs.org/">Angular</a>. There are great resources out there for learning JavaScript and communities for solving problems and providing help.</p>
 
-                <h3>References</h3>
-                <p>Andrew, R., 2016. <i>Should I use Grid or Flexbox?.</i> [Online] 
-                    Available at: https://rachelandrew.co.uk/archives/2016/03/30/should-i-use-grid-or-flexbox/
-                    [Accessed 27 February 2017].
-
-                </p>
+                
 
                 <button onclick="window.history.go(-1)" class="btn--back">Go back</button>
             </article>
