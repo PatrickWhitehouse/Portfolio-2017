@@ -45,6 +45,18 @@ h4{
 }
 
 
+a[href="#main"]{
+  background-color: $secondary;
+  display: inline;
+  position: absolute;
+  left: 20px;
+  top: -999px;
+  z-index: 99;
+  &:focus{
+    top:0;
+  }
+}
+
 
 
 

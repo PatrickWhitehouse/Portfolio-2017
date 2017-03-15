@@ -16,7 +16,9 @@
 </head>
 
 <body>
-
+<!-- Skip Links -->
+<a href="#main">Skip nav to main content</a>
+<!-- End Skip Links -->
     <header>
         <div class="trigger trigger--sub">
             <button class="hamburger hamburger--spring" type="button">
@@ -39,7 +41,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main">
         <div class="wrapper">
             <article>
                 <h1>Vanilla JavaScript</h1>
@@ -67,7 +69,7 @@
                 </p>
 
                 <h3>How</h3>
-                <p>JavaScript is used on most of the websites serving on the web. JavaScript helps improve user experience by providing features such as animations. Recent trends such as responsive hamburger menus usually rely heavily on JavaScript. Quite a lot of developers chose to use jQuery rather than Vanilla JavaScript as the code is easier to understand and effects can be achieved with little code in comparison to Vanilla JavaScript.  However, as previously mentioned, it’s a waste of time and bandwidth making the user download the full jQuery library just for them to see a simple fade in animation which can be achieved in both CSS and Vanilla JavsScript.</p>
+                <p>JavaScript is used on most of the websites serving on the web. JavaScript helps improve user experience by providing features such as animations. Recent trends such as responsive hamburger menus usually rely heavily on JavaScript. Quite a lot of developers chose to use jQuery rather than Vanilla JavaScript as the code is easier to understand and effects can be achieved with little code in comparison to Vanilla JavaScript.  However, as previously mentioned, it’s a waste of time and bandwidth making the user download the full jQuery library just for them to see a simple fade in animation which can be achieved in both CSS and Vanilla JavsScript. Prior to this project, I had a basic understanding of Vanilla JavaScript thanks to some small projects at university. However, a lot of documentation is located at <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla's MDN</a> which I found extremely useful.</p>
 
                 <h4>First Iteration</h4>
                 <p>The first iteration was to see how easy it was to change a div colour using Vanilla JavaScript. Straight away, I noticed a weakness to Vanilla JavaScript compared to jQuery. In Vanilla JavaScript, you need to store the div in a variable in order to prevent continuously using the lengthy selector:<pre><code>(document.getElementById(‘id’))</code></pre> In jQuery, you can simply grab the ID or class by using: <pre><code>$(‘#div’).</code></pre></p>
@@ -80,7 +82,7 @@
                 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
                 <h4>Third Iteration</h4>
-                <p>Once I had figured out how to append classes, I decided to challenge myself. A set myself a task to animate elements once they were visible in the viewport (window). After using <a href="http://stackoverflow.com">Stack Overflow</a> for some troubleshooting, I discovered I was able to use document.getElementsByClassName('box'); to retrieve all the items with the class name ‘box’. Unlike the getElementById, it returned the classes in an array format which meant a loop had to be used to apply classes to each box, otherwise, only the first box would have been affected and had the class applied to it. This is where I struggled most. Making an element fade in when it is visible in the viewport is easier said than done in Vanilla JavaScript and for this iteration, I had to settle with making the elements animate once the last paragraph had been scrolled past.
+                <p>Once I had figured out how to append classes, I decided to challenge myself. I set myself a task to animate elements once they were visible in the viewport (window). After using <a href="http://stackoverflow.com">Stack Overflow</a> for some troubleshooting, I discovered I was able to use document.getElementsByClassName('box'); to retrieve all the items with the class name ‘box’. Unlike the getElementById, it returned the classes in an array format which meant a loop had to be used to apply classes to each box, otherwise, only the first box would have been affected and had the class applied to it. This is where I struggled most. Making an element fade in when it is visible in the viewport is easier said than done in Vanilla JavaScript and for this iteration, I had to settle with making the elements animate once the last paragraph had been scrolled past.
 </p>
                 <p data-height="400" data-theme-id="dark" data-slug-hash="KWWwGB" data-default-tab="result" data-user="patrickwhitehouse" data-embed-version="2" data-pen-title="JavaScript animation" class="codepen">See the Pen <a href="http://codepen.io/patrickwhitehouse/pen/KWWwGB/">JavaScript animation</a> by Patrick Whitehouse (<a href="http://codepen.io/patrickwhitehouse">@patrickwhitehouse</a>) on <a href="http://codepen.io">CodePen</a>.</p>
                 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -101,7 +103,32 @@
                 <h3>Evaluation</h3>
                 <p>It’s clear to see why some developers chose to use jQuery over JavaScript, one of the main reasons being due to its simple syntax and understanding. From now on I will try to use Vanilla JavaScript where possible, as almost anything can be achieved by using it. It’s also vital that accessibility is taken into consideration too and to always consider those with poor internet connection speeds. This is only a small amount of what JavaScript can achieve and with websites becoming more and more advance, JavaScript will always play a huge part in allowing them to function. Not only is JavaScript important for promoting user experience, common front end app frameworks are based from JavaScript, including both <a href="https://facebook.github.io/react/">React.js</a> and <a href="https://angularjs.org/">Angular</a>. There are great resources out there for learning JavaScript and communities for solving problems and providing help.</p>
 
-                
+                <h3>References</h3>
+                <p>AngularJS, No Date. <i>AngluarJS - Superheroic JavaScript MVW Framework.</i> [Online] 
+                Available at: https://angularjs.org
+                [Accessed 10 March 2017].
+                </p>
+                <p>CodePen, No Date. <i>CodePen.</i> [Online] 
+                Available at: http://codepen.io
+                [Accessed 10 March 2017].
+                </p>
+                <p>Facebook, No Date. <i>A JavaScript library for building user interfaces - React.</i> [Online] 
+                Available at: https://facebook.github.io/react/
+                [Accessed 10 March 2017].
+                </p>
+                <p>Query, No Date. <i>jQuery.</i> [Online] 
+                Available at: https://jquery.com
+                [Accessed 10 March 2017].</p>
+                <p>
+                    Mozilla, No Date. <i>JavaScript | MDN.</i> [Online] 
+                    Available at: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+                    [Accessed 10 March 2017].
+
+                </p>
+                <p>Stack Overflow, No Date. <i>Stack Overflow.</i> [Online] 
+                Available at: http://stackoverflow.com
+                [Accessed 10 March 2017].
+                </p>
 
                 <button onclick="window.history.go(-1)" class="btn--back">Go back</button>
             </article>

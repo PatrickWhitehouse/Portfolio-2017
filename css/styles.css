@@ -114,6 +114,16 @@ pre {
 h4 {
   font-style: italic; }
 
+a[href="#main"] {
+  background-color: #04eea0;
+  display: inline;
+  position: absolute;
+  left: 20px;
+  top: -999px;
+  z-index: 99; }
+  a[href="#main"]:focus {
+    top: 0; }
+
 /* Body Styling */
 body {
   color: #292929;
