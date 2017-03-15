@@ -381,6 +381,14 @@ a.work__visit{
   justify-content: center;
 }
 
+img.blog__example{
+  max-width: 100%;
+  @media (min-width: $tablet) {
+    max-width: 50%;
+    float: left;
+  }
+}
+
 /* Contact page */
 
 

@@ -338,6 +338,13 @@ a.work__visit {
   align-items: center;
   justify-content: center; }
 
+img.blog__example {
+  max-width: 100%; }
+  @media (min-width: 768px) {
+    img.blog__example {
+      max-width: 50%;
+      float: left; } }
+
 /* Contact page */
 form {
   display: flex;
